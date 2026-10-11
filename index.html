@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Designer & Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" fill="white"/>
+        <rect x="8" y="8" width="10" height="10" fill="black"/>
+        <rect x="22" y="8" width="10" height="10" fill="black"/>
+        <rect x="8" y="22" width="10" height="10" fill="black"/>
+        <circle cx="27" cy="27" r="5" fill="black"/>
+      </svg>
+    </a>
+    <div class="nav__links">
+      <a href="#work" class="nav__link" data-hover="Work">Work</a>
+      <a href="#about" class="nav__link" data-hover="About">About</a>
+      <a href="#services" class="nav__link" data-hover="Services">Services</a>
+      <a href="#contact" class="nav__link" data-hover="Contact">Contact</a>
+    </div>
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="#work" class="mobile-menu__link">Work</a>
+      <a href="#about" class="mobile-menu__link">About</a>
+      <a href="#services" class="mobile-menu__link">Services</a>
+      <a href="#contact" class="mobile-menu__link">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero__bg-text" aria-hidden="true">CREATIVE</div>
+    <div class="hero__content">
+      <div class="hero__tag">
+        <span class="hero__tag-dot"></span>
+        <span class="hero__tag-text">Available for freelance</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-line" data-animate="reveal">
+          <span>Design</span>
+        </span>
+        <span class="hero__title-line" data-animate="reveal">
+          <span>&amp; Development</span>
+        </span>
+        <span class="hero__title-line hero__title-line--outline" data-animate="reveal">
+          <span>Studio</span>
+        </span>
+      </h1>
+      <p class="hero__subtitle" data-animate="fade-up">
+        We craft digital experiences that merge aesthetics with functionality — 
+        building brands, websites, and products that leave lasting impressions.
+      </p>
+      <div class="hero__cta" data-animate="fade-up">
+        <a href="#work" class="btn btn--primary">
+          <span>View Projects</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" data-animate="fade-up">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+
+    <!-- Decorative elements -->
+    <div class="hero__decoration" aria-hidden="true">
+      <svg class="hero__geo hero__geo--1" viewBox="0 0 100 100" width="60" height="60">
+        <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+        <circle cx="50" cy="50" r="30" stroke="white" stroke-width="1" fill="none" opacity="0.2"/>
+      </svg>
+      <svg class="hero__geo hero__geo--2" viewBox="0 0 100 100" width="80" height="80">
+        <rect x="10" y="10" width="80" height="80" stroke="white" stroke-width="1" fill="none" opacity="0.15" transform="rotate(45, 50, 50)"/>
+      </svg>
+      <svg class="hero__geo hero__geo--3" viewBox="0 0 100 100" width="40" height="40">
+        <polygon points="50,5 95,95 5,95" stroke="white" stroke-width="1" fill="none" opacity="0.2"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Marquee -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__inner">
+      <span>Branding</span>
+      <span class="marquee__dot">◆</span>
+      <span>UI/UX Design</span>
+      <span class="marquee__dot">◆</span>
+      <span>Web Development</span>
+      <span class="marquee__dot">◆</span>
+      <span>Motion Design</span>
+      <span class="marquee__dot">◆</span>
+      <span>Creative Direction</span>
+      <span class="marquee__dot">◆</span>
+      <span>Branding</span>
+      <span class="marquee__dot">◆</span>
+      <span>UI/UX Design</span>
+      <span class="marquee__dot">◆</span>
+      <span>Web Development</span>
+      <span class="marquee__dot">◆</span>
+      <span>Motion Design</span>
+      <span class="marquee__dot">◆</span>
+      <span>Creative Direction</span>
+      <span class="marquee__dot">◆</span>
+    </div>
+  </section>
+
+  <!-- Work Section -->
+  <section class="section work" id="work">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label" data-animate="fade-up">Selected Work</span>
+        <h2 class="section__title" data-animate="fade-up">Featured Projects</h2>
+      </div>
+
+      <div class="work__grid">
+        <!-- Project 1 -->
+        <article class="project project--large" data-animate="fade-up">
+          <a href="#" class="project__link">
+            <div class="project__image">
+              <svg viewBox="0 0 800 600" class="project__svg">
+                <defs>
+                  <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="800" height="600" fill="#111"/>
+                <rect width="800" height="600" fill="url(#grid1)"/>
+                <circle cx="400" cy="300" r="150" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+                <circle cx="400" cy="300" r="100" stroke="white" stroke-width="1" fill="none" opacity="0.2"/>
+                <circle cx="400" cy="300" r="50" stroke="white" stroke-width="2" fill="none" opacity="0.4"/>
+                <line x1="250" y1="300" x2="550" y2="300" stroke="white" stroke-width="1" opacity="0.15"/>
+                <line x1="400" y1="150" x2="400" y2="450" stroke="white" stroke-width="1" opacity="0.15"/>
+                <text x="400" y="310" text-anchor="middle" fill="white" font-family="Inter" font-size="24" font-weight="300" letter-spacing="8">MERIDIAN</text>
+              </svg>
+              <div class="project__overlay">
+                <span class="project__view">View Project →</span>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3 class="project__title">Meridian</h3>
+              <p class="project__category">Brand Identity / Web Design</p>
+              <span class="project__year">2026</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project" data-animate="fade-up">
+          <a href="#" class="project__link">
+            <div class="project__image">
+              <svg viewBox="0 0 600 700" class="project__svg">
+                <rect width="600" height="700" fill="#0a0a0a"/>
+                <rect x="100" y="150" width="200" height="200" stroke="white" stroke-width="1" fill="none" opacity="0.3" transform="rotate(15, 200, 250)"/>
+                <rect x="300" y="300" width="200" height="200" stroke="white" stroke-width="1" fill="none" opacity="0.2" transform="rotate(-10, 400, 400)"/>
+                <rect x="150" y="350" width="150" height="150" stroke="white" stroke-width="1" fill="none" opacity="0.25" transform="rotate(30, 225, 425)"/>
+                <text x="300" y="620" text-anchor="middle" fill="white" font-family="Inter" font-size="18" font-weight="300" letter-spacing="6">AXIOM</text>
+              </svg>
+              <div class="project__overlay">
+                <span class="project__view">View Project →</span>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3 class="project__title">Axiom</h3>
+              <p class="project__category">UI/UX Design</p>
+              <span class="project__year">2026</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project" data-animate="fade-up">
+          <a href="#" class="project__link">
+            <div class="project__image">
+              <svg viewBox="0 0 600 700" class="project__svg">
+                <rect width="600" height="700" fill="#0d0d0d"/>
+                <polygon points="300,100 500,450 100,450" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+                <polygon points="300,180 450,400 150,400" stroke="white" stroke-width="1" fill="none" opacity="0.2"/>
+                <polygon points="300,260 400,380 200,380" stroke="white" stroke-width="1" fill="none" opacity="0.15"/>
+                <circle cx="300" cy="320" r="5" fill="white" opacity="0.5"/>
+                <text x="300" y="600" text-anchor="middle" fill="white" font-family="Inter" font-size="18" font-weight="300" letter-spacing="6">VERTEX</text>
+              </svg>
+              <div class="project__overlay">
+                <span class="project__view">View Project →</span>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3 class="project__title">Vertex</h3>
+              <p class="project__category">Creative Development</p>
+              <span class="project__year">2025</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project project--large" data-animate="fade-up">
+          <a href="#" class="project__link">
+            <div class="project__image">
+              <svg viewBox="0 0 800 600" class="project__svg">
+                <rect width="800" height="600" fill="#080808"/>
+                <g opacity="0.3">
+                  <line x1="100" y1="100" x2="700" y2="100" stroke="white" stroke-width="0.5"/>
+                  <line x1="100" y1="200" x2="700" y2="200" stroke="white" stroke-width="0.5"/>
+                  <line x1="100" y1="300" x2="700" y2="300" stroke="white" stroke-width="0.5"/>
+                  <line x1="100" y1="400" x2="700" y2="400" stroke="white" stroke-width="0.5"/>
+                  <line x1="100" y1="500" x2="700" y2="500" stroke="white" stroke-width="0.5"/>
+                </g>
+                <path d="M100,400 Q200,100 300,300 T500,200 T700,350" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+                <circle cx="300" cy="300" r="4" fill="white" opacity="0.6"/>
+                <circle cx="500" cy="200" r="4" fill="white" opacity="0.6"/>
+                <circle cx="700" cy="350" r="4" fill="white" opacity="0.6"/>
+                <text x="400" y="560" text-anchor="middle" fill="white" font-family="Inter" font-size="24" font-weight="300" letter-spacing="8">PULSE</text>
+              </svg>
+              <div class="project__overlay">
+                <span class="project__view">View Project →</span>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3 class="project__title">Pulse</h3>
+              <p class="project__category">Data Visualization / Dashboard</p>
+              <span class="project__year">2025</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual" data-animate="fade-up">
+          <svg viewBox="0 0 500 600" class="about__portrait">
+            <defs>
+              <clipPath id="portraitClip">
+                <rect x="50" y="50" width="400" height="500" rx="8"/>
+              </clipPath>
+            </defs>
+            <rect width="500" height="600" fill="#111" rx="12"/>
+            <g clip-path="url(#portraitClip)">
+              <rect x="50" y="50" width="400" height="500" fill="#1a1a1a"/>
+              <!-- Abstract portrait representation -->
+              <circle cx="250" cy="220" r="80" stroke="white" stroke-width="1.5" fill="none" opacity="0.4"/>
+              <ellipse cx="250" cy="380" rx="120" ry="150" stroke="white" stroke-width="1.5" fill="none" opacity="0.3"/>
+              <line x1="250" y1="140" x2="250" y2="530" stroke="white" stroke-width="0.5" opacity="0.15"/>
+              <line x1="130" y1="300" x2="370" y2="300" stroke="white" stroke-width="0.5" opacity="0.15"/>
+            </g>
+            <rect x="50" y="50" width="400" height="500" rx="8" stroke="white" stroke-width="1" fill="none" opacity="0.1"/>
+          </svg>
+          <div class="about__experience">
+            <span class="about__experience-number">8+</span>
+            <span class="about__experience-text">Years of<br/>Experience</span>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <span class="section__label" data-animate="fade-up">About</span>
+          <h2 class="section__title" data-animate="fade-up">Crafting digital<br/>experiences with<br/>purpose</h2>
+          <div class="about__text" data-animate="fade-up">
+            <p>I'm a multidisciplinary designer and developer based in New York, specializing in creating exceptional digital experiences that live at the intersection of design and technology.</p>
+            <p>With over 8 years of experience, I've collaborated with startups, agencies, and Fortune 500 companies to bring their visions to life through thoughtful design and clean code.</p>
+          </div>
+          <div class="about__stats" data-animate="fade-up">
+            <div class="stat">
+              <span class="stat__number">50+</span>
+              <span class="stat__label">Projects Completed</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">30+</span>
+              <span class="stat__label">Happy Clients</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">12</span>
+              <span class="stat__label">Awards Won</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="section__label" data-animate="fade-up">What I Do</span>
+        <h2 class="section__title" data-animate="fade-up">Services</h2>
+      </div>
+
+      <div class="services__list">
+        <article class="service" data-animate="fade-up">
+          <div class="service__header">
+            <span class="service__number">01</span>
+            <svg class="service__icon" viewBox="0 0 48 48" width="48" height="48" fill="none">
+              <rect x="6" y="6" width="36" height="36" rx="4" stroke="white" stroke-width="1.5"/>
+              <circle cx="24" cy="24" r="8" stroke="white" stroke-width="1.5"/>
+              <line x1="6" y1="18" x2="42" y2="18" stroke="white" stroke-width="1" opacity="0.3"/>
+              <line x1="6" y1="30" x2="42" y2="30" stroke="white" stroke-width="1" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3 class="service__title">UI/UX Design</h3>
+          <p class="service__desc">Creating intuitive and visually stunning user interfaces that enhance user engagement and drive conversions.</p>
+          <ul class="service__tags">
+            <li>User Research</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>Design Systems</li>
+          </ul>
+        </article>
+
+        <article class="service" data-animate="fade-up">
+          <div class="service__header">
+            <span class="service__number">02</span>
+            <svg class="service__icon" viewBox="0 0 48 48" width="48" height="48" fill="none">
+              <polyline points="16,12 4,24 16,36" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              <polyline points="32,12 44,24 32,36" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="28" y1="8" x2="20" y2="40" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service__title">Web Development</h3>
+          <p class="service__desc">Building fast, responsive, and accessible websites using modern technologies and best practices.</p>
+          <ul class="service__tags">
+            <li>React / Next.js</li>
+            <li>TypeScript</li>
+            <li>Performance</li>
+            <li>Accessibility</li>
+          </ul>
+        </article>
+
+        <article class="service" data-animate="fade-up">
+          <div class="service__header">
+            <span class="service__number">03</span>
+            <svg class="service__icon" viewBox="0 0 48 48" width="48" height="48" fill="none">
+              <circle cx="24" cy="24" r="20" stroke="white" stroke-width="1.5"/>
+              <path d="M24 4 C24 4 38 16 38 24 C38 32 30 44 24 44 C18 44 10 32 10 24 C10 16 24 4 24 4Z" stroke="white" stroke-width="1" opacity="0.4"/>
+              <ellipse cx="24" cy="24" rx="20" ry="8" stroke="white" stroke-width="1" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3 class="service__title">Brand Identity</h3>
+          <p class="service__desc">Developing cohesive brand identities that tell compelling stories and create lasting emotional connections.</p>
+          <ul class="service__tags">
+            <li>Logo Design</li>
+            <li>Brand Strategy</li>
+            <li>Visual Identity</li>
+            <li>Guidelines</li>
+          </ul>
+        </article>
+
+        <article class="service" data-animate="fade-up">
+          <div class="service__header">
+            <span class="service__number">04</span>
+            <svg class="service__icon" viewBox="0 0 48 48" width="48" height="48" fill="none">
+              <rect x="8" y="8" width="14" height="14" rx="2" stroke="white" stroke-width="1.5"/>
+              <rect x="26" y="8" width="14" height="14" rx="2" stroke="white" stroke-width="1.5"/>
+              <rect x="8" y="26" width="14" height="14" rx="2" stroke="white" stroke-width="1.5"/>
+              <circle cx="33" cy="33" r="7" stroke="white" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="service__title">Motion Design</h3>
+          <p class="service__desc">Crafting fluid animations and micro-interactions that bring digital products to life with personality.</p>
+          <ul class="service__tags">
+            <li>Animation</li>
+            <li>Micro-interactions</li>
+            <li>Transitions</li>
+            <li>Storytelling</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials / Clients Marquee -->
+  <section class="clients" aria-label="Clients">
+    <div class="container">
+      <span class="section__label section__label--center" data-animate="fade-up">Trusted By</span>
+    </div>
+    <div class="clients__marquee">
+      <div class="clients__track">
+        <span class="client">Google</span>
+        <span class="client__sep">·</span>
+        <span class="client">Apple</span>
+        <span class="client__sep">·</span>
+        <span class="client">Spotify</span>
+        <span class="client__sep">·</span>
+        <span class="client">Netflix</span>
+        <span class="client__sep">·</span>
+        <span class="client">Airbnb</span>
+        <span class="client__sep">·</span>
+        <span class="client">Stripe</span>
+        <span class="client__sep">·</span>
+        <span class="client">Figma</span>
+        <span class="client__sep">·</span>
+        <span class="client">Slack</span>
+        <span class="client__sep">·</span>
+        <span class="client">Google</span>
+        <span class="client__sep">·</span>
+        <span class="client">Apple</span>
+        <span class="client__sep">·</span>
+        <span class="client">Spotify</span>
+        <span class="client__sep">·</span>
+        <span class="client">Netflix</span>
+        <span class="client__sep">·</span>
+        <span class="client">Airbnb</span>
+        <span class="client__sep">·</span>
+        <span class="client">Stripe</span>
+        <span class="client__sep">·</span>
+        <span class="client">Figma</span>
+        <span class="client__sep">·</span>
+        <span class="client">Slack</span>
+        <span class="client__sep">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__content">
+          <span class="section__label" data-animate="fade-up">Get in Touch</span>
+          <h2 class="contact__title" data-animate="fade-up">Let's work<br/>together</h2>
+          <p class="contact__text" data-animate="fade-up">Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your vision to life.</p>
+          <a href="mailto:hello@studio.com" class="contact__email" data-animate="fade-up">hello@studio.com</a>
+        </div>
+        <form class="contact__form" data-animate="fade-up">
+          <div class="form__group">
+            <label for="name" class="form__label">Name</label>
+            <input type="text" id="name" class="form__input" placeholder="Your name" required />
+          </div>
+          <div class="form__group">
+            <label for="email" class="form__label">Email</label>
+            <input type="email" id="email" class="form__input" placeholder="your@email.com" required />
+          </div>
+          <div class="form__group">
+            <label for="message" class="form__label">Message</label>
+            <textarea id="message" class="form__input form__textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <span>Send Message</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" fill="white"/>
+            <rect x="8" y="8" width="10" height="10" fill="black"/>
+            <rect x="22" y="8" width="10" height="10" fill="black"/>
+            <rect x="8" y="22" width="10" height="10" fill="black"/>
+            <circle cx="27" cy="27" r="5" fill="black"/>
+          </svg>
+          <p class="footer__tagline">Designing the future,<br/>one pixel at a time.</p>
+        </div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link">Twitter / X</a>
+          <a href="#" class="footer__social-link">Dribbble</a>
+          <a href="#" class="footer__social-link">GitHub</a>
+          <a href="#" class="footer__social-link">LinkedIn</a>
+        </div>
+        <div class="footer__copyright">
+          <p>© 2026 Studio. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
